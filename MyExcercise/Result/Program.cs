@@ -11,17 +11,29 @@ namespace Result
     {
         static void Main(string[] args)
         {
-          
+
         }
-        
+
         /// <summary>
         /// 同步函数里有异步代码
         /// </summary>
         void Test1()
         {
-             Task.Delay(1000);
+            DoubleDelayAsync(1000);
 
 
+        }
+
+        async Task DoubleDelayCanWaitAsync(int ms)
+        {
+            await Task.Delay(ms);
+            Thread.Sleep(ms);
+        }
+
+        async void DoubleDelayAsync(int ms)
+        {
+            await Task.Delay(ms);
+            Thread.Sleep(ms);
         }
     }
 }
