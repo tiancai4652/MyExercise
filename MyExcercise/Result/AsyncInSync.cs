@@ -30,7 +30,7 @@ namespace Result
         {
             Console.WriteLine("Main Thread Before DelayAsync:" + Thread.CurrentThread.ManagedThreadId);
 
-            DelayAsync(1000);
+            DelayAsync(10000);
 
             Console.WriteLine("Main Thread After DelayAsync:" + Thread.CurrentThread.ManagedThreadId);
         }
@@ -42,7 +42,7 @@ namespace Result
         /// 异步方法里有同步代码执行顺序：
         /// 1 当前线程:进入DelayAsync方法
         /// 2 当前线程:同步执行Thread.Sleep(1000);
-        /// 3 当前线程:(发现async里有await）当前线程返回DelayAsync的调用方。
+        /// 3 当前线程:(发现async里有await）当前线程返回DelayAsync的调用方,向下执行。
         /// 4 其他线程:执行await后的函数和Thread.Sleep(2000);)
         ///  
         /// 在异步方法中：Await之前的执行还是调用的线程，Await之后的执行就是另一个线程了
