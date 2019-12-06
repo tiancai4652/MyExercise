@@ -17,7 +17,6 @@ namespace Result
             Console.WriteLine("ReturnVoidAsync Before Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             await Task.Run(() =>
             {
-                Thread.Sleep(1000);
                 Console.WriteLine("ReturnVoidAsync In Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             });
             Console.WriteLine("ReturnVoidAsync After Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
@@ -29,10 +28,12 @@ namespace Result
         /// <returns></returns>
         public static async Task ReturnTaskAsync()
         {
+            Console.WriteLine("ReturnTaskAsync Before Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             await Task.Run(() =>
             {
-                Thread.Sleep(1000);
+                Console.WriteLine("ReturnTaskAsync In Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             });
+            Console.WriteLine("ReturnTaskAsync After Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
         }
 
         /// <summary>
@@ -41,10 +42,12 @@ namespace Result
         /// <returns></returns>
         public static async Task<int> ReturnTaskIntAsync()
         {
+            Console.WriteLine("ReturnTaskIntAsync Before Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             await Task.Run(() =>
             {
-                Thread.Sleep(1000);
+                Console.WriteLine("ReturnTaskIntAsync In Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             });
+            Console.WriteLine("ReturnTaskIntAsync After Task Thread ID:" + Thread.CurrentThread.ManagedThreadId);
             return 0;
         }
 

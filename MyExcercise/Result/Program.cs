@@ -9,9 +9,10 @@ namespace Result
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            AsyncInSync.Test();
+            AsyncInAsync.Test2Async();
             Console.ReadKey();
         }
 
