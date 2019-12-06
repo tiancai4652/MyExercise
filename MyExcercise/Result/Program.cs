@@ -3,21 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MyExcercise
+namespace Result
 {
     class Program
     {
         static void Main(string[] args)
         {
-            #region
-
-            //Asynic.Office.Asynic.SyncBreakfast();
-            //Asynic.Office.Asynic.SyncBreakfast2Async();
-
-
-
-            #endregion
-
+            // Task task = new Task(() => { Thread.Sleep(1000 * 5); });
+            //当你创建一个Task的时候，Task就已经启动了
         }
     }
 }
