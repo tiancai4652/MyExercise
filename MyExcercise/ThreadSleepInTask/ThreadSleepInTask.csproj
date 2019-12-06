@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD70B9BA-9970-4754-8C22-D8EE2935CCF6}</ProjectGuid>
+    <ProjectGuid>{41068A05-C428-43F6-B783-2A7056036676}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Result</RootNamespace>
-    <AssemblyName>Result</AssemblyName>
+    <RootNamespace>ThreadSleepInTask</RootNamespace>
+    <AssemblyName>ThreadSleepInTask</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

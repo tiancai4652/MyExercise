@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Result
 {
@@ -9,8 +11,17 @@ namespace Result
     {
         static void Main(string[] args)
         {
-            // Task task = new Task(() => { Thread.Sleep(1000 * 5); });
-            //当你创建一个Task的时候，Task就已经启动了
+          
+        }
+        
+        /// <summary>
+        /// 同步函数里有异步代码
+        /// </summary>
+        void Test1()
+        {
+             Task.Delay(1000);
+
+
         }
     }
 }

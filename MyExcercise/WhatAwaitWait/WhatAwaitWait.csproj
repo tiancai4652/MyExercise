@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD70B9BA-9970-4754-8C22-D8EE2935CCF6}</ProjectGuid>
+    <ProjectGuid>{EE10ECFD-EF21-4384-B3F7-C06128AD04FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Result</RootNamespace>
-    <AssemblyName>Result</AssemblyName>
+    <RootNamespace>WhatAwaitWait</RootNamespace>
+    <AssemblyName>WhatAwaitWait</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

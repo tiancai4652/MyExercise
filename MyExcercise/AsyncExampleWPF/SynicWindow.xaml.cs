@@ -59,16 +59,11 @@ namespace AsyncExampleWPF
             {
                 byte[] urlContents = await GetURLContentsAsync(url);
 
-                // The previous line abbreviates the following two assignment statements.
-
-                // GetURLContentsAsync returns a Task<T>. At completion, the task
-                // produces a byte array.
-                //Task<byte[]> getContentsTask = GetURLContentsAsync(url);
-                //byte[] urlContents = await getContentsTask;
+            
 
                 DisplayResults(url, urlContents);
 
-                // Update the total.
+            
                 total += urlContents.Length;
             }
             // Display the total count for all of the websites.
@@ -115,7 +110,7 @@ namespace AsyncExampleWPF
             //Task task = Task.Delay(1000 * 5);
             //Task<bool> task = new Task(() => { Thread.Sleep(1000 * 5);return null; });
 
-            Task<bool> task= MyDelayAsynic(10000 * 5);
+            Task<bool> task= MyDelayAsynic(1000 * 5);
             Taskx = await task;
 
             // Return the result as a byte array.
