@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8346C77A-9E1E-4883-B024-1DF8BC4E626F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyExcercise</RootNamespace>
-    <AssemblyName>MyExcercise</AssemblyName>
+    <RootNamespace>Asynic</RootNamespace>
+    <AssemblyName>Asynic</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

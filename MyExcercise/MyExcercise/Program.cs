@@ -9,6 +9,15 @@ namespace MyExcercise
     {
         static void Main(string[] args)
         {
+            #region
+
+            Asynic.Office.Asynic.SyncBreakfast();
+            Asynic.Office.Asynic.SyncBreakfast2Async();
+
+
+
+            #endregion
+
         }
     }
 }
