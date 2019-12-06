@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,6 +35,37 @@ namespace AsyncExampleWPF
         {
             SynicWindow synicWindow = new SynicWindow();
             synicWindow.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            DemoAsync();
+            MessageBox.Show("同步代码");
+        }
+
+        async Task DemoAsync()
+        {
+            await Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                MessageBox.Show("DemoAsync.InnerTask" + Thread.CurrentThread.ManagedThreadId);
+            });
+            Thread.Sleep(3000);
+            MessageBox.Show("DemoAsync" + Thread.CurrentThread.ManagedThreadId);
+        }
+
+        async Task DemoAsync2()
+        {
+            await DemoAsync();
+            Thread.Sleep(3000);
+            MessageBox.Show("DemoAsync2" + Thread.CurrentThread.ManagedThreadId);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            DemoAsync2();
+            Thread.Sleep(3000);
+            MessageBox.Show("Button_Click" + Thread.CurrentThread.ManagedThreadId);
         }
     }
 }
