@@ -14,7 +14,7 @@ namespace MyExcercise.Asynic.Office
         /// <summary>
         /// 同步阻塞代码:你将按顺序执行，面包放进烤面包机后盯着此烤面包机,什么也不能做，直到面包弹出。
         /// </summary>
-        public static void SyncBreakfast()
+        public static void Breakfast()
         {
             //Coffee cup = PourCoffee();
             //Console.WriteLine("coffee is ready");
@@ -54,7 +54,7 @@ namespace MyExcercise.Asynic.Office
         /// 我的理解是一个厨师变成了三个厨师，第一个厨师煎蛋，第二个煎培根，第三个烤面包，第三个厨师还是会一直盯着烤面包机.....？？？？
         /// </summary>
         /// <returns></returns>
-        public static async System.Threading.Tasks.Task SyncBreakfast2Async()
+        public static void Breakfast2()
         {
             //Coffee cup = PourCoffee();
             //Console.WriteLine("coffee is ready");
@@ -72,6 +72,95 @@ namespace MyExcercise.Asynic.Office
             //Console.WriteLine("Breakfast is ready!");
         }
 
+        /// <summary>
+        /// 你可以一次启动所有的异步任务。 你仅在需要结果时才会等待每项任务。
+        /// 使用 Task 或 Task<TResult> 对象来保存运行中的任务。 你首先需要 await 每项任务，然后再使用它的结果
+        /// </summary>
+        public static void Breakfast3()
+        {
+            //Coffee cup = PourCoffee();
+            //Console.WriteLine("coffee is ready");
+            //Task<Egg> eggsTask = FryEggs(2);
+            //Task<Bacon> baconTask = FryBacon(3);
+            //Task<Toast> toastTask = ToastBread(2);
+            //Toast toast = await toastTask;
+            //ApplyButter(toast);
+            //ApplyJam(toast);
+            //Console.WriteLine("toast is ready");
+            //Juice oj = PourOJ();
+            //Console.WriteLine("oj is ready");
+
+            //Egg eggs = await eggsTask;
+            //Console.WriteLine("eggs are ready");
+            //Bacon bacon = await baconTask;
+            //Console.WriteLine("bacon is ready");
+
+            //Console.WriteLine("Breakfast is ready!");
+
+
+
+        }
+
+
+        /// <summary>
+        /// 将异步任务和等待异步任务结果的同步任务合并成一个异步任务
+        /// 异步任务结果+同步任务=新的异步任务
+        /// </summary>
+        //async Task<Toast> MakeToastWithButterAndJamAsync(int number)
+        //{
+        //    var toast = await ToastBreadAsync(number);
+        //    ApplyButter(toast);
+        //    ApplyJam(toast);
+        //    return toast;
+        //}
+
+        /// <summary>
+        /// 最终代码
+        /// 尽可能启动任务，不要在等待任务完成时造成阻塞。
+        /// </summary>
+        void Breakfast4()
+        {
+            //Coffee cup = PourCoffee();
+            //Console.WriteLine("coffee is ready");
+            //var eggsTask = FryEggsAsync(2);
+            //var baconTask = FryBaconAsync(3);
+            //var toastTask = MakeToastWithButterAndJamAsync(2);
+
+            //var allTasks = new List<Task> { eggsTask, baconTask, toastTask };
+            //while (allTasks.Any())
+            //{
+            //    Task finished = await Task.WhenAny(allTasks);
+            //    if (finished == eggsTask)
+            //    {
+            //        Console.WriteLine("eggs are ready");
+            //    }
+            //    else if (finished == baconTask)
+            //    {
+            //        Console.WriteLine("bacon is ready");
+            //    }
+            //    else if (finished == toastTask)
+            //    {
+            //        Console.WriteLine("toast is ready");
+            //    }
+            //    allTasks.Remove(finished);
+            //}
+            //Juice oj = PourOJ();
+            //Console.WriteLine("oj is ready");
+            //Console.WriteLine("Breakfast is ready!");
+
+            //async Task<Toast> MakeToastWithButterAndJamAsync(int number)
+            //{
+            //    var toast = await ToastBreadAsync(number);
+            //    ApplyButter(toast);
+            //    ApplyJam(toast);
+            //    return toast;
+            //}
+
+        }
+
+
+
+
         #region Private
 
         static void PourCoffee()
@@ -79,7 +168,7 @@ namespace MyExcercise.Asynic.Office
             Thread.Sleep(1000 * 2);
         }
 
-        static int FryEggs()
+        static void FryEggs()
         {
             Thread.Sleep(1000 * 2);
         }
