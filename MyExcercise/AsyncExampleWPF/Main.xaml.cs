@@ -67,5 +67,8 @@ namespace AsyncExampleWPF
             Thread.Sleep(3000);
             MessageBox.Show("Button_Click" + Thread.CurrentThread.ManagedThreadId);
         }
+
+
+        //为什么DemoAsync.InnerTask是一个线程而其他的都是主线程
     }
 }
