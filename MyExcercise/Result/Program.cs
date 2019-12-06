@@ -11,7 +11,8 @@ namespace Result
     {
         static void Main(string[] args)
         {
-
+            AsyncInSync.Test();
+            Console.ReadKey();
         }
 
         /// <summary>
