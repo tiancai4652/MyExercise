@@ -9,6 +9,8 @@ namespace Result
 {
     /// <summary>
     /// 同步函数里有异步代码(只有一种情况:同步+返回值为Void的异步)
+    /// 
+    /// 结论:异步方法中,Await之前还是当前线程的同步方法
     /// </summary>
     public class AsyncInSync
     {
