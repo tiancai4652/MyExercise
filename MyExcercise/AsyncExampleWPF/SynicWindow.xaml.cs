@@ -58,12 +58,7 @@ namespace AsyncExampleWPF
             foreach (var url in urlList)
             {
                 byte[] urlContents = await GetURLContentsAsync(url);
-
-            
-
                 DisplayResults(url, urlContents);
-
-            
                 total += urlContents.Length;
             }
             // Display the total count for all of the websites.
@@ -110,7 +105,7 @@ namespace AsyncExampleWPF
             //Task task = Task.Delay(1000 * 5);
             //Task<bool> task = new Task(() => { Thread.Sleep(1000 * 5);return null; });
 
-            Task<bool> task= MyDelayAsynic(1000 * 5);
+            Task<bool> task= MyDelayAsynic(1000 );
             Taskx = await task;
 
             // Return the result as a byte array.

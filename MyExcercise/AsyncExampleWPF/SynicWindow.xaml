@@ -9,6 +9,8 @@
     <Grid>
         <Button Name="startButton" Content="Button" HorizontalAlignment="Left" Margin="60,30,0,0" VerticalAlignment="Top" Width="75" Click="startButton_Click"/>
         <TextBox Height="250" Width="500" Name="resultsTextBox" HorizontalAlignment="Left"  Margin="190,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" />
-
+        <TextBlock HorizontalAlignment="Left" Margin="190,32,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+            请注意，显示计数需要几秒钟时间。 与此同时，在等待请求的资源下载时，UI 线程仍然处于非阻止状态。 
+        </TextBlock>
     </Grid>
 </Window>

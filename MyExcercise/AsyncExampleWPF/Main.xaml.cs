@@ -37,10 +37,10 @@ namespace AsyncExampleWPF
             synicWindow.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            DemoAsync();
-            MessageBox.Show("同步代码");
+            await DemoAsync();
+            MessageBox.Show("Button_Click  ThreadID:" + Thread.CurrentThread.ManagedThreadId);
         }
 
         async Task DemoAsync()
@@ -48,24 +48,21 @@ namespace AsyncExampleWPF
             await Task.Run(() =>
             {
                 Thread.Sleep(3000);
-                MessageBox.Show("DemoAsync.InnerTask" + Thread.CurrentThread.ManagedThreadId);
+                MessageBox.Show("DemoAsync.InnerTask ThreadID:" + Thread.CurrentThread.ManagedThreadId);
             });
             Thread.Sleep(3000);
-            MessageBox.Show("DemoAsync" + Thread.CurrentThread.ManagedThreadId);
+            MessageBox.Show("DemoAsync  ThreadID:" + Thread.CurrentThread.ManagedThreadId);
         }
 
-        async Task DemoAsync2()
+        async void DemoAsync2()
         {
             await DemoAsync();
-            Thread.Sleep(3000);
-            MessageBox.Show("DemoAsync2" + Thread.CurrentThread.ManagedThreadId);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             DemoAsync2();
-            Thread.Sleep(3000);
-            MessageBox.Show("Button_Click" + Thread.CurrentThread.ManagedThreadId);
+            MessageBox.Show("Button_Click  ThreadID:" + Thread.CurrentThread.ManagedThreadId);
         }
 
 

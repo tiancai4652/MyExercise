@@ -9,8 +9,8 @@
     <Grid>
         <Button Content="同步" HorizontalAlignment="Left" Margin="140,170,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="异步" HorizontalAlignment="Left" Margin="425,170,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="No Await" HorizontalAlignment="Left" Margin="270,285,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Await" HorizontalAlignment="Left" Margin="440,285,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+        <Button ToolTip="await碰到async，异步方法会在await之后在线程池中按顺序执行" Content="异步Click(private async void Button_Click_2)" HorizontalAlignment="Left" Margin="270,285,0,0" VerticalAlignment="Top" Width="250" Click="Button_Click_2"/>
+        <Button ToolTip="await碰到async，主线程会回到await(async)的调用方继续执行"  Content="同步Click(private void Button_Click_3)" HorizontalAlignment="Left" Margin="275,340,0,0" VerticalAlignment="Top" Width="250" Click="Button_Click_3"/>
 
     </Grid>
 </Window>
