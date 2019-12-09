@@ -27,13 +27,13 @@ namespace AsyncExampleWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            GetByteArrayAsync mainWindow = new GetByteArrayAsync();
             mainWindow.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SynicWindow synicWindow = new SynicWindow();
+            GetURLContentsAsync synicWindow = new GetURLContentsAsync();
             synicWindow.Show();
         }
 
