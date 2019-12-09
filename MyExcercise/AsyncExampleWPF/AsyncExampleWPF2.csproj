@@ -61,11 +61,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SynicWindow.xaml">
+    <Page Include="GetByteArrayAsync.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="GetURLContentsAsync.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -76,11 +76,11 @@
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SynicWindow.xaml.cs">
-      <DependentUpon>SynicWindow.xaml</DependentUpon>
+    <Compile Include="GetByteArrayAsync.xaml.cs">
+      <DependentUpon>GetByteArrayAsync.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="GetURLContentsAsync.xaml.cs">
+      <DependentUpon>GetURLContentsAsync.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
