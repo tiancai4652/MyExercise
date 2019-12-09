@@ -60,6 +60,9 @@
     <Compile Include="MultiAsyncCommandView.xaml.cs">
       <DependentUpon>MultiAsyncCommandView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReturnValueView.xaml.cs">
+      <DependentUpon>ReturnValueView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhenAllView.xaml.cs">
       <DependentUpon>WhenAllView.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MultiAsyncCommandView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReturnValueView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,6 +10,7 @@
         <Button Content="执行耗时任务，异步不会卡顿" HorizontalAlignment="Left" Margin="80,80,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click"/>
         <Button Content="WhenAll:等待返回值相同的任务s全部完成后返回结果" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Width="315" Click="Button_Click_1"/>
         <Button ToolTip="Async里Await后返回调用方继续下一个Await" Content="同时进行多个异步任务（一个task里面多个AwaitTask）" HorizontalAlignment="Left" Margin="80,161,0,0" VerticalAlignment="Top" Width="330" Click="Button_Click_2"/>
+        <Button Content="ReturnValue" HorizontalAlignment="Left" Margin="475,80,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

@@ -41,5 +41,11 @@ namespace wpf1
             MultiAsyncCommandView multiAsyncCommandView = new MultiAsyncCommandView();
             multiAsyncCommandView.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            ReturnValueView returnValueView = new ReturnValueView();
+            returnValueView.Show();
+        }
     }
 }
