@@ -29,5 +29,11 @@ namespace wpf1
             Windows1 windows1 = new Windows1();
             windows1.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WhenAllView whenAllView = new WhenAllView();
+            whenAllView.Show();
+        }
     }
 }

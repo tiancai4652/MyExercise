@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="执行耗时任务，异步不会卡顿" HorizontalAlignment="Left" Margin="65,95,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click"/>
+        <Button Content="执行耗时任务，异步不会卡顿" HorizontalAlignment="Left" Margin="70,76,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click"/>
+        <Button Content="WhenAll:等待返回值相同的任务s全部完成后返回结果" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Width="315" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
