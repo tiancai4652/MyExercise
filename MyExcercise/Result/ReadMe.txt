@@ -7,3 +7,7 @@
 Q1:
 https://q.cnblogs.com/q/124701/
 为什么在异步方法中，在线程池中调用的方法能对控件赋值，不知必须得在ui线程吗
+
+
+Q2:
+wpf1.ReturnValueView.ValueTask 例子运行失败
