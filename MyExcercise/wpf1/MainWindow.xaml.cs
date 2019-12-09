@@ -35,5 +35,11 @@ namespace wpf1
             WhenAllView whenAllView = new WhenAllView();
             whenAllView.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MultiAsyncCommandView multiAsyncCommandView = new MultiAsyncCommandView();
+            multiAsyncCommandView.Show();
+        }
     }
 }

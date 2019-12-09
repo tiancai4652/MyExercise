@@ -32,19 +32,11 @@ namespace wpf1
 
         private async Task CreateMultipleTasksAsync()
         {
-            // Declare an HttpClient object, and increase the buffer size. The  
-            // default buffer size is 65,536.  
-            HttpClient client =
-                new HttpClient() { MaxResponseContentBufferSize = 1000000 };
-
             // Create and start the tasks. As each task finishes, DisplayResults   
             // displays its length.  
-            Task<int> download1 =
-                ProcessURLAsync("https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming", client);
-            Task<int> download2 =
-                ProcessURLAsync("https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await", client);
-            Task<int> download3 =
-                ProcessURLAsync("https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await", client);
+            Task<int> download1 = GetVAsync(1);
+            Task<int> download2 = GetVAsync(2);
+            Task<int> download3 = GetVAsync(3);
 
             // Await each task.  
             int length1 = await download1;
@@ -55,6 +47,14 @@ namespace wpf1
 
             // Display the total count for the downloaded websites.  
             resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
+        }
+
+        async Task<int> GetVAsync(int index)
+        {
+            int a = 1;
+            await Task.Delay(3000);
+            resultsTextBox.Text += index + "ok" + Environment.NewLine;
+            return a;
         }
 
         async Task<int> ProcessURLAsync(string url, HttpClient client)
