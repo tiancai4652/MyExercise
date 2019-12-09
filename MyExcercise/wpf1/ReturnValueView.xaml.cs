@@ -56,5 +56,27 @@ namespace wpf1
             await Task.Delay(1000);
             return DateTime.Now.DayOfWeek.ToString();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            txtbox.Text = $"You rolled { GetDiceRoll().Result}";
+        }
+
+        private static async ValueTask<int> GetDiceRoll()
+        {
+            int roll1 = await Roll();
+            int roll2 = await Roll();
+            return roll1 + roll2;
+        }
+        static Random rnd;
+        private static async ValueTask<int> Roll()
+        {
+            if (rnd == null)
+                 rnd = new Random();
+
+            await Task.Delay(500);
+            int diceRoll = rnd.Next(1, 7);
+            return diceRoll;
+        }
     }
 }

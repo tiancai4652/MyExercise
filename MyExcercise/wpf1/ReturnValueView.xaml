@@ -7,10 +7,14 @@
         mc:Ignorable="d"
         Title="ReturnValueView" Height="450" Width="800">
     <Grid>
-        <Button Content="Task_TResult" HorizontalAlignment="Left" Margin="45,95,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click"/>
+        <Button Content="Task_TResult" HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click"/>
         <TextBox x:Name="txtbox" HorizontalAlignment="Left" Height="145" Margin="85,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="585"/>
-        <TextBlock HorizontalAlignment="Left" Margin="210,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top">
+        <TextBlock HorizontalAlignment="Left" Margin="210,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
         Result 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 await 访问此值，而不是直接访问属性。
+        </TextBlock>
+        <Button Content="ValueTask TResult" HorizontalAlignment="Left" Margin="45,55,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="210,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+        Task 和 TaskTResult 是引用类型，因此，性能关键路径中的内存分配会对性能产生负面影响，尤其当分配出现在紧凑循环中时。 支持通用返回类型意味着可返回轻量值类型（而不是引用类型），从而避免额外的内存分配。
         </TextBlock>
 
     </Grid>
