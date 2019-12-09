@@ -29,14 +29,7 @@ namespace AsyncExampleWPF
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             resultsTextBox.Clear();
-
-            // One-step async call.
             await SumPageSizesAsync();
-
-            // Two-step async call.
-            //Task sumTask = SumPageSizesAsync();
-            //await sumTask;
-
             resultsTextBox.Text += "\r\nControl returned to startButton_Click.\r\n";
         }
 
