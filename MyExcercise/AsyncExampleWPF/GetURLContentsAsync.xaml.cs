@@ -31,8 +31,7 @@ namespace AsyncExampleWPF
             resultsTextBox.Clear();
 
             // Two-step async call.
-            Task sumTask = SumPageSizesAsync();
-            await sumTask;
+            await SumPageSizesAsync();
 
             // One-step async call.
             //await SumPageSizesAsync();
@@ -42,14 +41,11 @@ namespace AsyncExampleWPF
 
         private async Task SumPageSizesAsync()
         {
-            // Make a list of web addresses.
             List<string> urlList = SetUpURLList();
 
-            // Create a query.
             IEnumerable<Task<int>> downloadTasksQuery =
                 from url in urlList select ProcessURLAsync(url);
 
-            // Use ToArray to execute the query and start the download tasks.
             Task<int>[] downloadTasks = downloadTasksQuery.ToArray();
 
             // You can do other work here before awaiting.
@@ -57,30 +53,8 @@ namespace AsyncExampleWPF
             // Await the completion of all the running tasks.
             int[] lengths = await Task.WhenAll(downloadTasks);
 
-            //// The previous line is equivalent to the following two statements.
-            //Task<int[]> whenAllTask = Task.WhenAll(downloadTasks);
-            //int[] lengths = await whenAllTask;
-
             int total = lengths.Sum();
 
-            //var total = 0;
-            //foreach (var url in urlList)
-            //{
-            //    byte[] urlContents = await GetURLContentsAsync(url);
-
-            //    // The previous line abbreviates the following two assignment statements.
-            //    // GetURLContentsAsync returns a Task<T>. At completion, the task
-            //    // produces a byte array.
-            //    //Task<byte[]> getContentsTask = GetURLContentsAsync(url);
-            //    //byte[] urlContents = await getContentsTask;
-
-            //    DisplayResults(url, urlContents);
-
-            //    // Update the total.
-            //    total += urlContents.Length;
-            //}
-
-            // Display the total count for all of the websites.
             resultsTextBox.Text +=
                 $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
