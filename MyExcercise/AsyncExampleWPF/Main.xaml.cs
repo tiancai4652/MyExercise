@@ -33,7 +33,7 @@ namespace AsyncExampleWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            GetURLContentsAsync synicWindow = new GetURLContentsAsync();
+            GetURLContentsAsyncView synicWindow = new GetURLContentsAsyncView();
             synicWindow.Show();
         }
 

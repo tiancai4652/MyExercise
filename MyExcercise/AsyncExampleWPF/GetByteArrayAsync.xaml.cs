@@ -35,11 +35,7 @@ namespace AsyncExampleWPF
 
         private async Task SumPageSizesAsync()
         {
-            // Make a list of web addresses.
             List<string> urlList = SetUpURLList();
-
-            // Declare an HttpClient object and increase the buffer size. The
-            // default buffer size is 65,536.
             HttpClient client = new HttpClient() { MaxResponseContentBufferSize = 1000000 };
 
             // Create a query.
@@ -49,36 +45,11 @@ namespace AsyncExampleWPF
             // Use ToArray to execute the query and start the download tasks.
             Task<int>[] downloadTasks = downloadTasksQuery.ToArray();
 
-            // You can do other work here before awaiting.
-
             // Await the completion of all the running tasks.
             int[] lengths = await Task.WhenAll(downloadTasks);
 
-            //// The previous line is equivalent to the following two statements.
-            //Task<int[]> whenAllTask = Task.WhenAll(downloadTasks);
-            //int[] lengths = await whenAllTask;
-
             int total = lengths.Sum();
 
-            //var total = 0;
-            //foreach (var url in urlList)
-            //{
-            //    // GetByteArrayAsync returns a Task<T>. At completion, the task
-            //    // produces a byte array.
-            //    byte[] urlContent = await client.GetByteArrayAsync(url);
-
-            //    // The previous line abbreviates the following two assignment
-            //    // statements.
-            //    Task<byte[]> getContentTask = client.GetByteArrayAsync(url);
-            //    byte[] urlContent = await getContentTask;
-
-            //    DisplayResults(url, urlContent);
-
-            //    // Update the total.
-            //    total += urlContent.Length;
-            //}
-
-            // Display the total count for all of the web addresses.
             resultsTextBox.Text +=
                 $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
@@ -106,11 +77,7 @@ namespace AsyncExampleWPF
 
         private void DisplayResults(string url, byte[] content)
         {
-            // Display the length of each web site. The string format
-            // is designed to be used with a monospaced font, such as
-            // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
