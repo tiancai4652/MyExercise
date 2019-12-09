@@ -30,31 +30,19 @@ namespace AsyncExampleWPF
         }
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
-            // Disable the button until the operation is complete.
             startButton.IsEnabled = false;
-
             resultsTextBox.Clear();
 
-            // One-step async call.
             await SumPageSizesAsync();
 
-            // Two-step async call.
-            //Task sumTask = SumPageSizesAsync();
-            //await sumTask;
-
             resultsTextBox.Text += "\r\nControl returned to startButton_Click.\r\n";
-
-            // Reenable the button in case you want to run the operation again.
             startButton.IsEnabled = true;
         }
 
         private async Task SumPageSizesAsync()
         {
-            // Make a list of web addresses.
             List<string> urlList = SetUpURLList();
-
             var total = 0;
-
             foreach (var url in urlList)
             {
                 byte[] urlContents = await GetURLContentsAsync(url);
@@ -99,36 +87,16 @@ namespace AsyncExampleWPF
 
         private async Task<byte[]> GetURLContentsAsync(string url)
         {
-            // The downloaded resource ends up in the variable named content.
             var content = new MemoryStream();
-
-            //Task task = Task.Delay(1000 * 5);
-            //Task<bool> task = new Task(() => { Thread.Sleep(1000 * 5);return null; });
-
-            Task<bool> task= MyDelayAsynic(1000 );
-            Taskx = await task;
-
-            // Return the result as a byte array.
+            await Task.Delay(1000); ;
             return content.ToArray();
         }
-
-        private async Task<bool> MyDelayAsynic(int ms)
-        {
-            await Task.Delay(ms);
-            return true;
-        }
-
-
 
 
 
         private void DisplayResults(string url, byte[] content)
         {
-            // Display the length of each website. The string format
-            // is designed to be used with a monospaced font, such as
-            // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
