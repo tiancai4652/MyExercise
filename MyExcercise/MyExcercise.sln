@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "进程间同步的互斥体类", "进程间同步的互斥体类", "{86E153A2-F616-49F2-BDFF-A2C64E5A81E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDll", "MyDll", "{374EE14D-7108-4570-9D3A-4F97085BB5DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
