@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3764A690-95B7-4D12-97DA-A274EE3DA502}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MemeoryMap</RootNamespace>
-    <AssemblyName>MemeoryMap</AssemblyName>
+    <ProjectGuid>{B75498F8-4D4F-4B77-B5BE-066CEBA87B80}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MemoryMap_Sample_Read</RootNamespace>
+    <AssemblyName>MemoryMap_Sample_Read</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,9 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NonPersistentMemoryMapping.cs" />
-    <Compile Include="PersistentMemoryMapping.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MemeoryMap\MemeoryMap.csproj">
+      <Project>{3764a690-95b7-4d12-97da-a274ee3da502}</Project>
+      <Name>MemeoryMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MemoryMap_Sample\MemoryMap_Sample_Write.csproj">
+      <Project>{efa9fc24-584e-4822-a0b3-896a54f21d74}</Project>
+      <Name>MemoryMap_Sample_Write</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
