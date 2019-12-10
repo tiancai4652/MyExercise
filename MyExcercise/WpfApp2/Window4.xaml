@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp2.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="多线程同步资源" Height="450" Width="800" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Button Content="线程1执行(占用资源)" HorizontalAlignment="Left" Margin="155,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_1"/>
+        <TextBox x:Name="txtbox" HorizontalAlignment="Left" Height="150" Margin="145,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="505"/>
+        <TextBlock HorizontalAlignment="Left" Margin="350,69,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+           由于没有机制来确定命名的系统互斥体是否被创建，它是最好指定false用于initiallyOwned调用此构造函数重载时
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="380,160,0,0" TextWrapping="Wrap" Text="请打开第二个程序员同时点击线程1执行按钮 " VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

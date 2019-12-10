@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="多线程同步资源" HorizontalAlignment="Left" Margin="95,95,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
-        <Button Content="Mutex (bool initiallyOwned);" HorizontalAlignment="Left" Margin="255,136,0,0" VerticalAlignment="Top" Width="235" RenderTransformOrigin="0.533,0.526" Click="Button_Click_2"/>
+        <Button Content="多线程同步资源(Mutex)" HorizontalAlignment="Left" Margin="95,95,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click"/>
+        <Button Content="多线程同步资源 Mutex(bool initiallyOwned);" HorizontalAlignment="Left" Margin="95,140,0,0" VerticalAlignment="Top" Width="235" RenderTransformOrigin="0.533,0.526" Click="Button_Click_2"/>
+        <Button Content="多进程同步资源 Mutex(bool initiallyOwned,string name);" HorizontalAlignment="Left" Margin="358,95,0,0" VerticalAlignment="Top" Width="345" RenderTransformOrigin="0.533,0.526" Click="Button_Click_1"/>
         <TextBox HorizontalAlignment="Left" Height="170" Margin="95,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="555"/>
+        <Button Content="确认是否本进程的锁 Mutex(bool initiallyOwned,string name,out bool createdNew);" HorizontalAlignment="Left" Margin="358,140,0,0" VerticalAlignment="Top" Width="407" RenderTransformOrigin="0.533,0.526" Click="Button_Click_3"/>
 
     </Grid>
 </Window>
