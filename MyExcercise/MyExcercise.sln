@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "共享内存", "共享内�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{1AB4A225-EEF3-4364-BB97-4FD087A4B7CC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "进程间同步的互斥体类", "进程间同步的互斥体类", "{86E153A2-F616-49F2-BDFF-A2C64E5A81E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,7 @@ Global
 		{857662B4-7A28-4BE4-968B-98F47A20B37B} = {366ED714-64AB-48FD-AABF-0FA1B9412CBB}
 		{831EF78E-2B0C-4D1A-B425-24BB8BD7BB8F} = {E1590166-B7E8-4C82-A296-3487C5CE06DE}
 		{1AB4A225-EEF3-4364-BB97-4FD087A4B7CC} = {831EF78E-2B0C-4D1A-B425-24BB8BD7BB8F}
+		{86E153A2-F616-49F2-BDFF-A2C64E5A81E7} = {E1590166-B7E8-4C82-A296-3487C5CE06DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAF418C-E445-484A-A9F9-051D65F784FE}

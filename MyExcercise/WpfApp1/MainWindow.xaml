@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="非持久化内存映射文件" Height="450" Width="800">
     <Grid>
         <Button Content="Process A 创建内存映射文件，并向其中写入值" HorizontalAlignment="Left" Margin="53,30,0,0" VerticalAlignment="Top" Width="285" Click="Button_Click"/>
         <Button Content="Process B 打开内存映射文件，并向其中写入值" HorizontalAlignment="Left" Margin="53,76,0,0" VerticalAlignment="Top" Width="285" Click="Button_Click_1"/>
