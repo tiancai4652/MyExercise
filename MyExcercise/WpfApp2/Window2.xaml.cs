@@ -21,17 +21,18 @@ namespace WpfApp2
     /// </summary>
     public partial class Window2 : Window
     {
-        private static Mutex mut = new Mutex();
+        Mutex mut = new Mutex(true);
 
         public Window2()
         {
             InitializeComponent();
+            txtbox.Text += "mut = new Mutex(true)" + Environment.NewLine;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Thread thread = new Thread(new ParameterizedThreadStart(TaskRun));
-            thread.Start("线程1");
+            mut.ReleaseMutex();
+            txtbox.Text += " mut.ReleaseMutex()" + Environment.NewLine;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -93,6 +94,11 @@ namespace WpfApp2
         {
             Thread thread = new Thread(new ParameterizedThreadStart(TaskRun2));
             thread.Start("线程3");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            mut.Dispose();
         }
     }
 }

@@ -29,5 +29,12 @@ namespace WpfApp2
             Window1 window1 = new Window1();
             window1.Show();
         }
+
+    
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Window2 window2 = new Window2();
+            window2.Show();
+        }
     }
 }

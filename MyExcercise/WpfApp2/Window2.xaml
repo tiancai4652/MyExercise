@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="多线程同步资源" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="多线程同步资源" Height="450" Width="800" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Grid>
-        <Button Content="线程1执行(占用资源)" HorizontalAlignment="Left" Margin="155,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
-        <Button Content="线程2执行(占用资源)" HorizontalAlignment="Left" Margin="155,130,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_1"/>
+        <Button Content="释放互斥体" HorizontalAlignment="Left" Margin="155,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
         <TextBox x:Name="txtbox" HorizontalAlignment="Left" Height="150" Margin="145,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="505"/>
         <TextBlock HorizontalAlignment="Left" Margin="485,99,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top">
             将Mutex定义成static
