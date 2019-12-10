@@ -19,11 +19,11 @@ namespace WpfApp2
     /// <summary>
     /// Window1.xaml 的交互逻辑
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window2 : Window
     {
-        private static Mutex mut = new Mutex();//=Mutex(false)
+        private static Mutex mut = new Mutex();
 
-        public Window1()
+        public Window2()
         {
             InitializeComponent();
         }
