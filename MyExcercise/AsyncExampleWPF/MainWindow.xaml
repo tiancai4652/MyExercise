@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncExampleWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Name="startButton" Content="Button" HorizontalAlignment="Left" Margin="60,30,0,0" VerticalAlignment="Top" Width="75" Click="startButton_Click"/>
         <TextBox Height="250" Width="500" Name="resultsTextBox" HorizontalAlignment="Left"  Margin="190,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" />

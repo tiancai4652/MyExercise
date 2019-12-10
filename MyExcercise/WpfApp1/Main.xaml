@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Main" Height="450" Width="800">
+        Title="Main" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="非持久化内存映射文件" HorizontalAlignment="Left" Margin="160,120,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click"/>
         <Button Content="持久化内存映射文件" HorizontalAlignment="Left" Margin="160,196,0,0" VerticalAlignment="Top" Width="215" Click="Button_Click_1"/>

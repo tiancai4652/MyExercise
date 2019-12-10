@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="执行耗时任务，异步不会卡顿" HorizontalAlignment="Left" Margin="80,80,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click"/>
         <Button Content="WhenAll:等待返回值相同的任务s全部完成后返回结果" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Width="315" Click="Button_Click_1"/>

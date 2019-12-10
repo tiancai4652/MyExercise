@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf1"
         mc:Ignorable="d"
-        Title="Windows1" Height="450" Width="800">
+        Title="Windows1" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button ToolTip="会卡住5s,不能移动，无响应,然后Done" Content="同步" HorizontalAlignment="Left" Margin="120,75,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button ToolTip="不会阻塞界面" Content="异步" HorizontalAlignment="Left" Margin="370,75,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" RenderTransformOrigin="5.333,36.316"/>

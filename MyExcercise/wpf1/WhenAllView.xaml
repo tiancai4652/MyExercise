@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf1"
         mc:Ignorable="d"
-        Title="WhenAllView" Height="450" Width="800">
+        Title="WhenAllView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="同步方法没有效果哦" HorizontalAlignment="Left" Margin="135,70,0,0" VerticalAlignment="Top" Width="185" Click="Button_Click"/>
         <TextBlock Name="txtblock" HorizontalAlignment="Left" Margin="150,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="165" Width="465"/>

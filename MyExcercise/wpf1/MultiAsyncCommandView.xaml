@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf1"
         mc:Ignorable="d"
-        Title="MultiAsyncCommandView" Height="450" Width="800">
+        Title="MultiAsyncCommandView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button ToolTip="多试几次，任务的完成次序不一样" Name="startButton" Content="Button" HorizontalAlignment="Left" Margin="115,115,0,0" VerticalAlignment="Top" Width="75" Click="startButton_Click"/>
         <TextBox Name="resultsTextBox" HorizontalAlignment="Left" Height="165" Margin="130,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="520"/>

@@ -45,6 +45,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "共享内存", "共享内�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeoryMap", "MemeoryMap\MemeoryMap.csproj", "{3764A690-95B7-4D12-97DA-A274EE3DA502}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{014394C5-CBE3-496B-88E0-8E39E63328CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{3764A690-95B7-4D12-97DA-A274EE3DA502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3764A690-95B7-4D12-97DA-A274EE3DA502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3764A690-95B7-4D12-97DA-A274EE3DA502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014394C5-CBE3-496B-88E0-8E39E63328CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014394C5-CBE3-496B-88E0-8E39E63328CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014394C5-CBE3-496B-88E0-8E39E63328CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014394C5-CBE3-496B-88E0-8E39E63328CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{5880763C-2EA9-41F4-8F6E-F25DA6E460CF} = {374EE14D-7108-4570-9D3A-4F97085BB5DA}
 		{2CCC6107-9D1C-4E82-93AF-E731B37B0FB8} = {5880763C-2EA9-41F4-8F6E-F25DA6E460CF}
 		{3764A690-95B7-4D12-97DA-A274EE3DA502} = {2CCC6107-9D1C-4E82-93AF-E731B37B0FB8}
+		{014394C5-CBE3-496B-88E0-8E39E63328CF} = {86E153A2-F616-49F2-BDFF-A2C64E5A81E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAF418C-E445-484A-A9F9-051D65F784FE}
