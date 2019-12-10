@@ -6,7 +6,29 @@ https://codereview.stackexchange.com/questions/115836/implementing-an-asynchrono
 Task用SemaphoreSlim 
 来实现同步
 
+1.
+Mutex mut = new Mutex()
+==》Mutex mut = new Mutex(false);
 
+2.
+Mutex mut = new Mutex(true);
+==》Mutex mut = new Mutex()；mut.WaitOne();
 
+3.
+if (mut.WaitOne(2000))
+	{
+		do something
+	}
+else
+	{
+		timeout do donothing
+	}
 
+4.
+ mut = new Mutex(false, "MyMutex1", out creatNew);
+ if(creatNew)
+ else
+ {
+ //当前锁已经被创建了(当前实例已经运行了)
+ }
 
